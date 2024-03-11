@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CalculadoraEmC_
+{
+    internal class Program
+    {
+        public static void Main(string[] args)
+        {
+            int valor1 = 0;
+            int valor2 = 0;
+            int resultado = 0;
+            string operacao = "";
+
+            Console.WriteLine("Digite abaixo um valor: ");
+            valor1 = Convert.ToInt16(Console.ReadLine());
+            Console.WriteLine("\nDigite qual operação você deseja realizar (+,-,*,/): ");
+            operacao = Console.ReadLine();
+            Console.WriteLine("\nAgora digite mais um valor: ");
+            valor2 = Convert.ToInt16(Console.ReadLine());
+
+            switch (operacao)
+            {
+                case "+":
+                    resultado = valor1 + valor2;
+                    Console.WriteLine("\nO resultado da sua operação é: {0}. ", resultado);
+                    Console.ReadKey();
+                    break;
+                case "-":
+                    resultado = valor1 - valor2;
+                    Console.WriteLine("\nO resultado da sua operação é: {0}. ", resultado);
+                    Console.ReadKey();
+                    break;
+                case "*":
+                    resultado = valor1 * valor2;
+                    Console.WriteLine("\nO resultado da sua operação é: {0}. ", resultado);
+                    Console.ReadKey();
+                    break;
+                case "/":
+                    resultado = valor1 / valor2;
+                    Console.WriteLine("\nO resultado da sua operação é: {0}. ", resultado);
+                    Console.ReadKey();
+                    break; 
+            }
+            
+        }
+    }
+}
